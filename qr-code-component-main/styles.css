@@ -5,11 +5,6 @@
 	--dark-blue: hsl(218, 44%, 22%);
 }
 
-@font-face {
-	font-family: 'Outfit', sans-serif;
-	src: url("https://fonts.google.com/specimen/Outfit");
-}
-
 body {
 	background-color: var(--light-gray);
 }
@@ -27,9 +22,9 @@ body {
 	align-items: center;
 	font-family: Outfit;
 	border-radius: 20px;
-	width: 290px;
 	background-color: var(--white);
 	padding: 15px;
+	width: 290px;
 }
 
 img {
@@ -50,12 +45,5 @@ p {
 	color: var(--grayish-blue);
 	text-align: center;
 	font-size: 15px;
+	font-weight: 400;
 }
-
-@media (min-width: 450px) {
-	.container {
-		flex-direction: column;
-	}
-}
-
-
