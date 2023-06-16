@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/styles/main.css">
+  <title>Frontend Mentor | Age calculator app</title>
+</head>
+<body>
+
+  <main class="birthday-container">
+    <div class="inputs" id="inputs">
+      <div class="age-input" for="day">
+        <span class="input-title" id="label">Day</span>
+        <input type="text" name="day" id="day" placeholder="DD">
+        <span class="error-message" id="day-error-message"></span>
+      </div>
+      <div class="age-input" for="month">
+        <span class="input-title" id="label">Month</span>
+        <input type="text" name="month" id="month" placeholder="MM">
+        <span class="error-message" id="month-error-message"></span>
+      </div>
+      <div class="age-input" for="year">
+        <span class="input-title" id="label">Year</span>
+        <input type="text" name="year" id="year" placeholder="YYYY">
+        <span class="error-message" id="year-error-message"></span>
+      </div>
+    </div>
+
+    <div class="separator">
+      <button type="submit" onClick="handleClick()">
+        <img src="./assets/images/icon-arrow.svg" alt="arrow icon">
+      </button>
+    </div>
+    
+    <div class="age">
+      <div><span class="birthday-number" id="birthYear">--</span><span class="birthday-str">years</span></div>
+      <div><span class="birthday-number" id="birthMonth">--</span><span class="birthday-str">months</span></div>
+      <div><span class="birthday-number" id="birthDay">--</span><span class="birthday-str">days</span></div>
+    </div>
+  </main>
+</body>
+<script src="assets/scripts/main.js"></script>
+</html>

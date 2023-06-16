@@ -1,0 +1,148 @@
+@import url("./font.css");
+
+:root {
+	--white: hsl(0, 0%, 100%);
+	--off-white: hsl(0, 0%, 94%);
+	--light-grey: hsl(0, 0%, 86%);
+	--smokey-grey: hsl(0, 1%, 44%);
+	--off-black: hsl(0, 0%, 8%);
+	--purple: hsl(259, 100%, 65%);
+	--light-red: hsl(0, 100%, 67%);
+}
+
+body {
+	background-color: var(--off-white);
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: var(--white);
+	padding: 45px 20px;
+	border-radius: 20px 20px 70px 20px;
+	width: 300px;
+}
+
+.inputs {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 90px;
+}
+.input-title {
+	font-family: "Poppins-Regular";
+	font-weight: 700;
+	font-size: 13px;
+	color: var(--smokey-grey);
+	text-transform: uppercase;
+	letter-spacing: 3px;;
+}
+
+.age-input {
+	flex: 0;
+}
+
+.age-input input{
+	font-family: "Poppins";
+	font-weight: 800;
+	font-size: 18px;
+	width: 65px;
+	/* max-width: 60px; */
+	/* height: 40px; */
+	border-radius: 8px;
+	outline: none;
+	border: 2px solid var(--off-white);
+	padding: 10px;
+	margin-top: 5px;
+	/* margin-bottom: 50px; */
+}
+
+.inputs.error .input-title {
+	color: var(--light-red);
+}
+
+.inputs.error input {
+	border: 2px solid var(--light-red);
+}
+
+.separator {
+	background-color: var(--off-white);
+	height: 2px;
+	position: relative;
+	margin: 40px 0;
+}
+
+.separator button {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: var(--purple);
+	border-radius: 50%;
+	border: none;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+}
+
+.separator button:active, .separator button:hover {
+	background-color: black;
+}
+
+.separator button img {
+	width: 30px;
+	height: 30px;
+}
+
+.age {
+	display: flex;
+	flex-direction: column;
+	color: var(--off-black);
+	font-family: Poppins;
+	font-style: italic;
+	font-weight: extra-bold;
+	font-size: 55px;
+}
+
+.age div {
+	margin: -10px 10px;
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.age .birthday-number {
+	color: var(--purple);
+}
+
+.error-message {
+	color: var(--light-red);
+	font-family: Arial;
+	font-size: 10px;
+	padding-top: 15px;
+	font-style: italic;
+	height: 10px;
+}
+
+@media screen and (min-width: 640px) {
+	main {
+		width: 480px;
+		padding: 50px 40px;
+		gap: 0;
+	}
+	.inputs {
+		justify-content: flex-start;
+		gap: 15px;
+	}
+	.age-input input {
+		width: 90px;
+	}
+	.separator button {
+		right: -30px;
+		left: auto;
+	}
+}
